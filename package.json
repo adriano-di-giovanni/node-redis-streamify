@@ -1,0 +1,42 @@
+{
+  "name": "node-redis-streamify",
+  "version": "0.1.1",
+  "description": "A Node.js library to augment node_redis interface with streaming version of some commands.",
+  "main": "lib/streamify.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha --reporter spec --timeout 20s test/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adriano-di-giovanni/node-redis-streamify.git"
+  },
+  "keywords": [
+    "node",
+    "redis",
+    "stream",
+    "readable",
+    "scan",
+    "hscan",
+    "sscan",
+    "zscan"
+  ],
+  "author": "Adriano Di Giovanni <me@adrianodigiovanni.com> (http://adrianodigiovanni.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adriano-di-giovanni/node-redis-streamify/issues"
+  },
+  "homepage": "https://github.com/adriano-di-giovanni/node-redis-streamify",
+  "devDependencies": {
+    "redis": "^0.12.1",
+    "hiredis": "^0.1.17",
+    "chai": "*",
+    "mocha": "*",
+    "async": "^0.9.0"
+  },
+  "dependencies": {
+    "underscore": "^1.7.0"
+  }
+}
