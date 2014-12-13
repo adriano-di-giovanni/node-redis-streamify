@@ -1,6 +1,6 @@
 # node-redis-streamify
 
-A Node.js library to augment [node_redis](https://github.com/mranney/node_redis) interface with streaming version of some commands.
+A Node.js library to augment [node_redis](https://github.com/mranney/node_redis) interface with streaming version of commands SCAN, HSCAN, SSCAN, ZSCAN.
 
 ## Installation
 
