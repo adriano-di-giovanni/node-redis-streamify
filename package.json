@@ -1,6 +1,6 @@
 {
   "name": "node-redis-streamify",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "A Node.js library to augment node_redis interface with streaming version of commands SCAN, HSCAN, SSCAN, ZSCAN.",
   "main": "lib/streamify.js",
   "directories": {

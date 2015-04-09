@@ -32,6 +32,8 @@ module.exports = function () {
 
       scan('*')
         .on('data', function (data) {
+          console.log(data);
+          this.end();
           expect(data).to.be.a('string');
         })
         .on('error', function (error) {
