@@ -22,6 +22,7 @@ var
 scan('*')
 	.on('data', function (data) {
 		// your code here
+		// call this.end() if you want to stop scanning
 	})
 	.on('error', function (error) {
 		// your code here
