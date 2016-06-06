@@ -25,7 +25,7 @@ module.exports = function () {
       expect(function () { client.streamified('DEL'); }).to.throw(Error);
     });
 
-    it.only('#streamified(\'SCAN\')', function (done) {
+    it('#streamified(\'SCAN\')', function (done) {
 
       var
         scan = client.streamified('SCAN'),
