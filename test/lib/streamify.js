@@ -8,7 +8,7 @@ var
 require('../../lib/streamify')(redis);
 
 module.exports = function () {
-  describe.only('streamify', function () {
+  describe('streamify', function () {
 
     var
       client;
@@ -25,21 +25,30 @@ module.exports = function () {
       expect(function () { client.streamified('DEL'); }).to.throw(Error);
     });
 
-    it('#streamified(\'SCAN\')', function (done) {
+    it.only('#streamified(\'SCAN\')', function (done) {
 
       var
-        scan = client.streamified('SCAN');
+        scan = client.streamified('SCAN'),
+        iteration = 1;
 
-      scan('*')
+      scan('*', 1)
         .on('data', function (data) {
-          console.log(data);
-          this.end();
+          var
+            context = this;
+          console.log(iteration, data);
+          this.pause();
+          console.log(iteration, 'paused');
+          setTimeout(function () {
+            context.resume();
+            console.log(iteration, 'resumed');
+          }, 1000);
           expect(data).to.be.a('string');
         })
         .on('error', function (error) {
           expect(error).to.be.an.instanceof(Error);
         })
         .on('end', function () {
+          console.log('end');
           done();
         });
     });

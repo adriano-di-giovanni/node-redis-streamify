@@ -1,6 +1,6 @@
 {
   "name": "node-redis-streamify",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "A Node.js library to augment node_redis interface with streaming version of commands SCAN, HSCAN, SSCAN, ZSCAN.",
   "main": "lib/streamify.js",
   "directories": {
@@ -30,13 +30,13 @@
   },
   "homepage": "https://github.com/adriano-di-giovanni/node-redis-streamify",
   "devDependencies": {
-    "redis": "^0.12.1",
-    "hiredis": "^0.1.17",
+    "async": "~1.5.2",
     "chai": "*",
+    "hiredis": "~0.4.1",
     "mocha": "*",
-    "async": "^0.9.0"
+    "redis": "~2.6.1"
   },
   "dependencies": {
-    "underscore": "^1.7.0"
+    "underscore": "~1.7.0"
   }
 }
